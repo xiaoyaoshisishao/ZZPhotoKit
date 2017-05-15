@@ -379,6 +379,24 @@
     
     [photoCell loadPhotoData:[self.photoArray objectAtIndex:indexPath.row]];
     
+    //当前的图片
+    ZZPhoto *photo = [self.photoArray objectAtIndex:indexPath.row];
+    if (photo) {
+        //循环已经选中的图片
+        for (int i=0; i<self.selectedAssets.count; i++) {
+            ZZPhoto *selectedPhoto=[self.selectedAssets objectAtIndex:i];
+            if (selectedPhoto) {
+                if([selectedPhoto.asset isEqual:photo.asset]){
+                    photo.isSelect = YES;
+                    photoCell.isSelect=YES;
+                    [self.selectArray insertObject:[self.photoArray objectAtIndex:indexPath.row] atIndex:self.selectArray.count];
+                    self.totalRound.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.selectArray.count];
+                }
+            }
+            
+        }
+    }
+    
     return photoCell;
 }
 #pragma UICollectionView --- Delegate

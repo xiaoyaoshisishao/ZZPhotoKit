@@ -108,12 +108,16 @@
 {
     if (indexPath.row == 0) {
         
-        
+       
         
         ZZPhotoController *photoController = [[ZZPhotoController alloc]init];
         photoController.selectPhotoOfMax = 8;
         //设置相册中完成按钮旁边小圆点颜色。
 //        photoController.roundColor = [UIColor greenColor];
+        
+        if(self.picArray&&self.picArray.count>0){//包含已经选中的图片
+            photoController.selectedAssets=self.picArray;
+        }
         
         [photoController showIn:self result:^(id responseObject){
 

@@ -18,4 +18,12 @@
 @property (nonatomic, assign) NSInteger        selectNum;
 @property (nonatomic, strong) ZZPhotoListModel *alumbModel;
 
+
+
+/**
+ 设置 已经选择的照片
+ */
+@property (nonatomic, strong) NSMutableArray *selectedAssets;
+
+
 @end

@@ -13,4 +13,10 @@
 @property (nonatomic, assign) NSInteger selectNum;
 @property (nonatomic,   copy) void (^photoResult)(id responseObject);
 
+
+/**
+ 设置 已经选择的照片
+ */
+@property (nonatomic, strong) NSMutableArray *selectedAssets;
+
 @end

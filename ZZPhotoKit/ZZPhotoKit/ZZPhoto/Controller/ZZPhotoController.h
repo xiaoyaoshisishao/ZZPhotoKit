@@ -23,9 +23,18 @@ typedef void (^ZZPhotoResult)(id responseObject);
  *    选择照片的最多张数
  */
 @property(assign,nonatomic) NSInteger selectPhotoOfMax;
+
+
+/**
+ 设置 已经选择的照片
+ */
+@property (nonatomic, strong) NSMutableArray *selectedAssets;
+
 /*
  *    设置回调方法
  */
 -(void)showIn:(UIViewController *)controller result:(ZZPhotoResult)result;
+
+
 
 @end

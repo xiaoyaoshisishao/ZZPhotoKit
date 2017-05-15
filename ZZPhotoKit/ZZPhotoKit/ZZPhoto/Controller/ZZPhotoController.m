@@ -86,6 +86,7 @@
     self.photoPickerController.roundColor    = self.roundColor;
     /* * *   同时设定最多选择照片的张数  * * */
     self.photoPickerController.selectNum     = _selectPhotoOfMax;
+    self.photoPickerController.selectedAssets=_selectedAssets;
     
     //然后再执行pushViewController控制器ZZPhotoPickerViewController
     //此控制器为详情相册，显示某个相册中的详细照片

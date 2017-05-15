@@ -141,6 +141,7 @@
     _photoPickerViewController.alumbModel = listmodel;
     _photoPickerViewController.navigationItem.title = listmodel.title;
     _photoPickerViewController.isAlubSeclect        = YES;
+    _photoPickerViewController.selectedAssets       =self.selectedAssets;
     [self.navigationController pushViewController:_photoPickerViewController animated:YES];
 }
 
